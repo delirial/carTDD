@@ -1,9 +1,12 @@
-const rover = require('../index.js')
-const position = ["f",10]
+const {rover, roverDisplacement,roverDirection } = require('../index.js')
+const command = ["f",10]
 describe("Rover orientation", () => {
-    it("Giving an initial position, return position", () => {
-        expect(rover(position)).toEqual(position);
+    it("Giving an initial command, return command", () => {
+        expect(rover(command)).toEqual(command);
     })
+    it ("Giving an initial command, returns direction and movemente", () => {
+        expect(roverDisplacement(command)).toEqual(10)
+    });
 
 }
 )
